@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, max-image-preview:none">
+<meta name="googlebot" content="noindex, noimageindex, nofollow, nosnippet">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Seni Rekayasa</title>
+<meta itemprop="description" name="description" content="Film Animasi & Lisensi Karya Seni Digital" />
+<meta property="og:locale" content="en">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mohamad Rido">
+<meta property="og:url" content="https://senirekayasa.com/">
+<meta property="og:site_name" content="Seni Rekayasa">
+<meta property="article:publisher" content="http://www.facebook.com/senirekayasa" />
+<meta property="article:author" content="https://www.facebook.com/senirekayasa" />
+<meta property="og:description" content="Film Animasi & Lisensi Karya Seni Digital">
+<meta content="Seni Rekayasa" name="Author">
+<meta content="https://www.facebook.com/senirekayasa" property="website:author">
+<meta content="Seni Rekayasa" name="twitter:site">
+<meta content="summary_large_image" name="twitter:card">
+<meta content="@seni_rekayasa" name="twitter:creator">
+<link rel="canonical" href="https://senirekayasa.com/">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css">
+    <style>
+
+body.dark-mode {
+    background-color: darkgrey;
+    color: #c9d1d9;
+}
+
+body.dark-mode header, body.dark-mode .footer-menu, body.dark-mode .popup-header, body.dark-mode .popup-footer {
+    background-color: #161b22; /* Warna latar belakang gelap untuk header dan footer */
+    color: #c9d1d9; /* Warna teks putih */
+    box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.3); /* Sesuaikan bayangan jika perlu */
+}
+
+body.dark-mode .footer-menu a {
+    color: #c9d1d9; /* Warna link putih di footer */
+}
+
+body.dark-mode .footer-menu a:hover {
+    color: #ff9900; /* Warna hover untuk link di footer */
+}
+
+body.dark-mode .content {
+background-color: #0d1117;
+}
+        /* Basic Styles */
+        body {
+            font-family: 'FreeSans', Arial, sans-serif;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* Pastikan semua elemen menggunakan border-box untuk perhitungan lebar */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        header, .footer-menu {
+            width: 100%;
+            height: 64px;
+            position: fixed;
+            left: 0;
+            z-index: 1000;
+            background-color: white;
+            color: darkgrey;
+            padding: 14px 0 0 0;
+            transform: translateY(0);
+            transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+            box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.1); /* Transparent shadow */
+        }
+
+        header {
+            top: 0;
+            display: flex;
+            justify-content: space-between; /* Adjusted for search bar */
+            align-items: center;
+            padding: 0 20px; /* Added padding for spacing */
+        }
+
+        .pih i {
+            font-size: 18px;
+            margin-left: 1.2em;
+        }
+
+        #site-title img {
+            max-height: 50px;
+            padding: 8px 0 6px 0;
+            object-fit: contain;
+        }
+
+        .search-bar {
+            width: 50%;
+            max-width: 300px; /* Adjust this as needed */
+            position: relative;
+        }
+
+        .search-bar input[type="text"] {
+            width: 100%;
+            height: 36px;
+            padding: 5px 70px 5px 10px; /* Adjusted for both clear and search icons */
+            border: 1px solid darkgrey;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .search-bar button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: darkgrey;
+            display: none; /* Hide by default */
+        }
+
+        .search-bar button.clear-btn {
+    right: 40px; /* Posisi sebelum tombol search */
+    display: none; /* Tombol clear disembunyikan secara default */
+}
+
+.search-bar button.search-btn {
+    right: 10px;
+    display: block; /* Pastikan tombol pencarian selalu terlihat */
+}
+        .search-bar button:hover {
+            color: deepskyblue;
+        }
+
+        .footer-menu {
+            bottom: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .popup-fm {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footer-menu a, .popup-fm a {
+            color: darkgrey;
+            text-decoration: none;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .footer-menu a.active, .popup-fm a.active {
+            color: deepskyblue;
+        }
+
+        .footer-menu a:hover, .popup-fm a:hover {
+            color: orange;
+        }
+
+        .footer-menu i, .popup-fm i {
+            font-size: 20px;
+            margin-bottom: 3px;
+        }
+
+        /* Content Styling */
+        .content {
+            padding-top: 60px;
+            padding-bottom: 60px;
+            min-height: 150vh;
+            background-color: #f4f4f4;
+            font-size: 18px;
+            text-align: center;
+            line-height: 2;
+        }
+
+        /* Footer Copyright Styles */
+        .footer-copyright {
+            display: none;
+            background-color: #444;
+            padding: 10px 0;
+            font-size: 14px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Transition Styles */
+        .header-hidden {
+            transform: translateY(-100%);
+            box-shadow: none;
+        }
+
+        .footer-hidden {
+            transform: translateY(100%);
+            box-shadow: none;
+        }
+
+        /* Responsive Styles */
+        @media (min-width: 1024px) {
+            .footer-menu {
+                display: none;
+            }
+
+            .footer-copyright {
+                display: block;
+            }
+
+            .content {
+                padding-bottom: 0;
+            }
+
+            .search-bar {
+                max-width: 400px; /* Adjust for larger screens */
+            }
+        }
+
+/* Gaya untuk pop-up */
+.popup-header {
+    display: none;
+    position: fixed;
+    top: 65px; /* Pastikan pop-up muncul di bawah header */
+    right: 20px; /* Sesuaikan posisi berdasarkan layout */
+    width: 300px;
+    background-color: white;
+color: darkgrey;
+    box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1001; /* Pastikan pop-up berada di atas elemen lainnya */
+    border-radius: 18px;
+    border: 1px solid f9f9f9;
+}
+
+.popup-header .popup-footer h3 {
+    margin-top: 0;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.popup-header form input[type="email"],
+.popup-header form button {
+    width: calc(100% - 0px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid darkgrey;
+}
+
+.popup-header form button {
+    background-color: deepskyblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.popup-header li a {
+text-decoration: none;
+color: deepskyblue;
+}
+
+.popup-footer li a {
+text-decoration: none;
+color: deepskyblue;
+}
+
+.popup-header form button:hover {
+    background-color: dodgerblue;
+}
+
+/* Gaya untuk tombol close */
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: darkgrey;
+}
+
+.close-btn:hover {
+    color: darkorange;
+}
+
+/* Gaya untuk pop-up menu Tools */
+.popup-footer {
+    display: none; /* Sembunyikan pop-up secara default */
+    position: fixed;
+    bottom: 65px; /* Agar muncul di atas footer */
+    left: 20px; /* Sesuaikan posisi berdasarkan layout */
+    width: 300px;
+    background-color: white;
+    color: darkgrey;
+    box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1001;
+    border-radius: 18px;
+}
+
+/* Style untuk container title */
+#site-title {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Membuat container title menempati ruang yang tersisa di header */
+}
+
+/* Style untuk title */
+.site-name {
+    margin-left: 10px; /* Jarak antara gambar dan title */
+    font-size: 20px; /* Sesuaikan ukuran font sesuai kebutuhan */
+    color: darkgrey; /* Sesuaikan warna font sesuai tema */
+    display: none; /* Default sembunyikan title */
+}
+
+/* Tampilkan title hanya pada layar laptop dan desktop */
+@media (min-width: 1024px) {
+    .site-name {
+        display: inline; /* Tampilkan title */
+    }
+}
+
+
+.search-bar button.clear-btn {
+    right: 40px; /* Beri jarak lebih dari search button */
+font-size: 18px;
+    display: none; /* Tetap sembunyikan secara default */
+}
+
+.search-bar button.search-btn {
+    right: 10px; /* Tetap pada posisinya */
+font-size: 18px;
+    display: block; /* Tetap tampil */
+}
+    </style>
+</head>
+<body>
+
+    <header id="site-header">
+    <div id="site-title">
+        <img src="http://cg3d.org/assets/img/pretended-studio.png" alt="Mohamad Rido">
+        <span class="site-name">SeniRekayasa</span> <!-- Title added here -->
+    </div>
+    <div class="search-bar">
+        <form action="/search" method="get">
+            <input type="text" id="search-input" name="q" placeholder="Search...">
+            <button type="button" class="clear-btn" id="clear-search"><i class="fas fa-times"></i></button>
+            <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+<div class="pih">
+    <i class="fas fa-paper-plane"></i>
+    <i class="fas fa-bell"></i>
+    <i class="fas fa-ellipsis-vertical"></i>
+</div>
+</header>
+
+<!-- Pop-up untuk icon bell -->
+<div id="popup-bell" class="popup-header">
+    <button class="close-btn">&times;</button>
+    <h3>Subscribe to our newsletter</h3>
+    <form action="/subscribe" method="post">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+</div>
+
+<!-- Pop-up untuk icon bars -->
+<div id="popup-ellipsis" class="popup-header">
+    <button class="close-btn">&times;</button>
+    <i id="dark-mode-btn" class="fas fa-moon"></i>
+<i id="light-mode-btn" class="fas fa-sun"></i>
+<i id="toggle-mode-btn" class="fas fa-desktop"></i>
+    <h3><i class="fas fa-cube"></i> 3D Models</h3>
+    <ul>
+        <li><a href="https://cg3d.org/aircraft">Aircraft</a></li>
+        <li><a href="https://cg3d.org/food">Food</a></li>
+        <li><a href="https://cg3d.org/vehicle">Vehicle</a></li>
+    </ul>
+    <h3><i class="fas fa-share-nodes"></i> Find Me</h3>
+
+    <div class="popup-fm">
+        <a href="https://youtube.com/@senireka_yasa">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://tiktok.com/@seni_rekayasa">
+            <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://x.com/seni_rekayasa">
+            <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://pinterest.com/seni_rekayasa">
+            <i class="fab fa-pinterest"></i>
+        </a>
+        <a href="https://t.me/seni_rekayasa">
+            <i class="fab fa-telegram"></i>
+        </a>
+    </div>
+</div>
+    
+
+    
+    <style>
+        .parallax {
+    background-color: #FEDCC8;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    perspective: 100px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    margin-left: -1500px;
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    will-change: transform;
+}
+
+.parallax__layer img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+}
+
+.parallax__cover {
+    background: #2D112B;
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 2000px;
+    z-index: 7;
+}
+
+.parallax__layer__0 {
+    transform: translateZ(-300px) scale(4);
+}
+
+.parallax__layer__1 {
+    transform: translateZ(-250px) scale(3.5);
+}
+
+.parallax__layer__2 {
+    transform: translateZ(-200px) scale(3);
+}
+
+.parallax__layer__3 {
+    transform: translateZ(-150px) scale(2.5);
+}
+
+.parallax__layer__4 {
+    transform: translateZ(-100px) scale(2);
+}
+
+.parallax__layer__5 {
+    transform: translateZ(-50px) scale(1.5);
+}
+
+.parallax__layer__6 {
+    transform: translateZ(0px) scale(1);
+}
+
+/* Tambahkan ini untuk memastikan urutan z-index yang benar */
+.parallax__layer__0 { z-index: 1; }
+.parallax__layer__1 { z-index: 2; }
+.parallax__layer__2 { z-index: 3; }
+.parallax__layer__3 { z-index: 4; }
+.parallax__layer__4 { z-index: 5; }
+.parallax__layer__5 { z-index: 6; }
+.parallax__layer__6 { z-index: 7; }
+    </style>
+    <div class="parallax">
+        <div class="parallax__layer parallax__layer__0">
+            <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_0.png?raw=true" />
+        </div>
+        <div class="parallax__layer parallax__layer__1">
+            <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_1.png?raw=true" />
+        </div>
+        <div class="parallax__layer parallax__layer__2">
+            <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_2.png?raw=true" />
+        </div>
+        <div class="parallax__layer parallax__layer__3">
+            <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_3.png?raw=true" />
+        </div>
+        <div class="parallax__layer parallax__layer__4">
+            <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_4.png?raw=true" />
+        </div>
+        <div class="parallax__layer parallax__layer__5">
+            <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_5.png?raw=true" />
+        </div>
+        <div class="parallax__layer parallax__layer__6">
+            <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_6.png?raw=true" />
+        <div class="parallax__cover">
+        </div>
+</div>
+</div>
+<!--section class="product">
+    <div class="video-container">
+        <video controls>
+            <source src="https://dev.mohamadrido.com/assets/videos/disaar.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="video-container">
+        <video controls>
+            <source src="https://dev.mohamadrido.com/assets/videos/pepsi.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="video-container">
+        <video controls>
+            <source src="https://dev.mohamadrido.com/assets/videos/hydrococo.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="video-container">
+        <video controls>
+            <source src="https://dev.mohamadrido.com/assets/videos/rustblast.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="video-container">
+        <video controls>
+            <source src="https://dev.mohamadrido.com/assets/videos/ultimate.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="video-container">
+        <video controls>
+            <source src="https://dev.mohamadrido.com/assets/videos/sealent.mp4" type="video/mp4">
+        </video>
+    </div>
+</section-->
+
+<style>
+    .product {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 50px;
+        padding: 20px;
+        margin-top: 100vh;
+        background: linear-gradient(to bottom, #2D112B 0%, rgba(255, 255, 255, 0) 50%), url('https://about.mohamadrido.com/bg.jpg');
+        background-size: cover;
+        background-position: center;
+        z-index: 3;
+        position: relative;
+    }
+
+    .video-container {
+        flex-basis: calc(33.333% - 20px);
+        max-width: 500px;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        overflow: hidden;
+        background: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    @media screen and (max-width: 1200px) {
+        .video-container {
+            flex-basis: calc(50% - 20px);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .video-container {
+            flex-basis: 100%;
+        }
+    }
+
+    /* Styling untuk kontrol video */
+    .video-container video::-webkit-media-controls-panel {
+        border-radius: 0 0 20px 20px;
+    }
+
+    .video-container video::-webkit-media-controls-enclosure {
+        border-radius: 0 0 20px 20px;
+    }
+
+    /* Untuk Firefox */
+    .video-container video::-moz-range-thumb {
+        border-radius: 20px;
+    }
+
+    /* Untuk Edge */
+    .video-container video::-ms-fill-lower,
+    .video-container video::-ms-fill-upper {
+        border-radius: 20px;
+    }
+
+    @supports (-moz-appearance:none) {
+        .video-container video {
+            border-radius: 20px;
+        }
+    }
+</style>
+
+
+
+    <div class="footer-menu" id="site-footer-menu">
+        <a href="https://senirekayasa.com/">
+            <i class="fas fa-home"></i>
+            Home
+        </a>
+        <a href="#tools">
+            <i class="fas fa-tools"></i>
+            Tools
+        </a>
+        <a href="https://senirekayasa.com/shop">
+            <i class="fas fa-shopping-cart"></i>
+            Shop
+        </a>
+        <a href="https://senirekayasa.com/blog">
+            <i class="fas fa-file-lines"></i>
+            Blog
+        </a>
+        <a href="https://senirekayasa.com/about">
+            <i class="fas fa-user"></i>
+            Profile
+        </a>
+    </div>
+
+<!-- Pop-up untuk menu Tools -->
+<div id="popup-tools" class="popup-footer">
+    <button class="close-btn">&times;</button>
+    <h3>Tools</h3>
+    <div class="popup-fm">
+        <a href="https://senirekayasa.com/">
+            <i class="fas fa-code"></i>
+            Menu 1
+        </a>
+        <a href="https://senirekayasa.com/">
+            <i class="fas fa-swatchbook"></i>
+            Menu 2
+        </a>
+        <a href="https://senirekayasa.com/">
+            <i class="fas fa-calendar-days"></i>
+            Menu 3
+        </a>
+    </div>
+</div>
+
+    <div class="footer-copyright">
+        <p>&copy; 2025 Seni Rekayasa.</p>
+    </div>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const toolsLink = document.querySelector('.footer-menu a[href="#blog"]');
+    const toolsPopup = document.getElementById('popup-tools');
+    const closeBtn = toolsPopup.querySelector('.close-btn');
+
+    toolsLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        toolsPopup.style.display = 'block';  // Tampilkan pop-up
+    });
+
+    closeBtn.addEventListener('click', function() {
+        toolsPopup.style.display = 'none';  // Sembunyikan pop-up
+    });
+
+    // Tutup pop-up saat klik di luar pop-up
+    window.addEventListener('click', function(event) {
+        if (event.target === toolsPopup) {
+            toolsPopup.style.display = 'none';  // Sembunyikan pop-up
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toolsLink = document.querySelector('.footer-menu a[href="#blog"]');
+    const toolsPopup = document.getElementById('popup-tools');
+    const closeBtn = toolsPopup.querySelector('.close-btn');
+
+    toolsLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        toolsPopup.style.display = 'block';  // Tampilkan pop-up
+    });
+
+    closeBtn.addEventListener('click', function() {
+        toolsPopup.style.display = 'none';  // Sembunyikan pop-up
+    });
+
+    // Tutup pop-up saat klik di luar pop-up
+    window.addEventListener('click', function(event) {
+        if (event.target === toolsPopup) {
+            toolsPopup.style.display = 'none';
+        }
+    });
+});
+
+// Fungsi untuk menerapkan tema sesuai dengan yang disimpan di localStorage
+function initTheme() {
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.remove('dark-mode');
+    }
+}
+
+// Fungsi untuk mengatur tema dan menyimpannya di localStorage
+function setTheme(theme) {
+    if (theme === 'dark') {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+// Panggil fungsi inisialisasi saat halaman dimuat
+document.addEventListener('DOMContentLoaded', function() {
+    initTheme();
+
+    // Tombol untuk mengaktifkan Dark Mode
+    document.getElementById('dark-mode-btn').addEventListener('click', function() {
+        setTheme('dark');
+    });
+
+    // Tombol untuk mengaktifkan Light Mode
+    document.getElementById('light-mode-btn').addEventListener('click', function() {
+        setTheme('light');
+    });
+
+    // Tombol untuk toggle mode (berpindah antara light dan dark)
+    document.getElementById('toggle-mode-btn').addEventListener('click', function() {
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            setTheme('light');
+        } else {
+            setTheme('dark');
+        }
+    });
+});
+
+        let scrollTimeout;
+        let lastScrollTop = 0;
+        const header = document.getElementById('site-header');
+        const footerMenu = document.getElementById('site-footer-menu');
+
+        function hideHeaderFooter() {
+            header.classList.add('header-hidden');
+            footerMenu.classList.add('footer-hidden');
+        }
+
+        function showFooterFirstThenHeader() {
+            footerMenu.classList.remove('footer-hidden');
+            setTimeout(() => {
+                header.classList.remove('header-hidden');
+            }, 200); // Show header 200ms after footer
+        }
+
+        window.addEventListener('scroll', function() {
+            clearTimeout(scrollTimeout);
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                hideHeaderFooter();
+            } else {
+                header.classList.add('header-hidden');
+                footerMenu.classList.remove('footer-hidden');
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+
+            scrollTimeout = setTimeout(showFooterFirstThenHeader, 800);
+        });
+
+        // Adding active class to the clicked link in the footer menu
+        const footerLinks = document.querySelectorAll('.footer-menu a');
+        footerLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                footerLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Mendapatkan referensi ke elemen input dan tombol clear
+        const searchInput = document.getElementById('search-input');
+        const clearButton = document.getElementById('clear-search');
+
+        // Fungsi untuk memperbarui visibilitas tombol clear
+        function updateClearButtonVisibility() {
+            if (searchInput.value.length > 0) {
+                clearButton.style.display = 'block';
+            } else {
+                clearButton.style.display = 'none';
+            }
+        }
+
+        // Menampilkan tombol clear hanya jika ada karakter yang diinput
+        searchInput.addEventListener('input', updateClearButtonVisibility);
+
+        // Menghapus teks di kotak pencarian dan menyembunyikan tombol clear ketika tombol clear diklik
+        clearButton.addEventListener('click', function() {
+            searchInput.value = '';
+            updateClearButtonVisibility();
+        });
+
+        // Sembunyikan tombol clear pada awalnya
+        updateClearButtonVisibility();
+
+// Dapatkan referensi ke elemen icon dan pop-up
+const bellIcon = document.querySelector('.fa-bell');
+const ellipsisIcon = document.querySelector('.fa-ellipsis-vertical');
+const popupBell = document.getElementById('popup-bell');
+const popupEllipsis = document.getElementById('popup-ellipsis');
+
+// Dapatkan referensi ke tombol close
+const closeButtons = document.querySelectorAll('.close-btn');
+
+// Fungsi untuk menampilkan pop-up
+function togglePopup(popup) {
+    popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+}
+
+// Event listener untuk icon bell
+bellIcon.addEventListener('click', function() {
+    togglePopup(popupBell);
+    popupEllipsis.style.display = 'none'; // Tutup popup lain jika terbuka
+});
+
+// Event listener untuk icon bars
+ellipsisIcon.addEventListener('click', function() {
+    togglePopup(popupEllipsis);
+    popupBell.style.display = 'none'; // Tutup popup lain jika terbuka
+});
+
+// Event listener untuk tombol close
+closeButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        this.parentElement.style.display = 'none';
+    });
+});
+
+// Event listener untuk menutup popup jika klik di luar popup
+window.addEventListener('click', function(event) {
+    if (event.target !== bellIcon && event.target !== ellipsisIcon &&
+        !popupBell.contains(event.target) && !popupEllipsis.contains(event.target)) {
+        popupBell.style.display = 'none';
+        popupEllipsis.style.display = 'none';
+    }
+});
+    </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const toolsLink = document.querySelector('.footer-menu a[href="#tools"]');
+    const toolsPopup = document.getElementById('popup-tools');
+    const closeBtn = toolsPopup.querySelector('.close-btn');
+
+    toolsLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        toolsPopup.style.display = 'block';  // Tampilkan pop-up
+    });
+
+    closeBtn.addEventListener('click', function() {
+        toolsPopup.style.display = 'none';  // Sembunyikan pop-up saat tombol close diklik
+    });
+
+    // Event listener untuk menutup pop-up ketika klik di luar area pop-up
+    document.addEventListener('click', function(event) {
+        if (!toolsPopup.contains(event.target) && !toolsLink.contains(event.target)) {
+            toolsPopup.style.display = 'none';  // Sembunyikan pop-up
+        }
+    });
+});
+    </script>
+</body>
+</html>
